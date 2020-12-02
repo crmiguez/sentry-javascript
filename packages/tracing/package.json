@@ -20,11 +20,13 @@
     "@sentry/minimal": "5.27.6",
     "@sentry/types": "5.27.6",
     "@sentry/utils": "5.27.6",
+    "btoa": "^1.2.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@sentry-internal/eslint-config-sdk": "5.27.6",
     "@sentry/browser": "5.27.6",
+    "@types/btoa": "^1.2.3",
     "@types/express": "^4.17.1",
     "@types/jsdom": "^16.2.3",
     "eslint": "7.6.0",

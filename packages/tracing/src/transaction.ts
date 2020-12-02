@@ -1,6 +1,7 @@
 import { getCurrentHub, Hub } from '@sentry/hub';
 import { Event, Measurements, Transaction as TransactionInterface, TransactionContext } from '@sentry/types';
 import { isInstanceOf, logger } from '@sentry/utils';
+import btoa from 'btoa';
 
 import { Span as SpanClass, SpanRecorder } from './span';
 
@@ -153,7 +154,7 @@ export class Transaction extends SpanClass implements TransactionInterface {
     //
     // which means the value can't include any equals signs, since they already have meaning. Equals signs are commonly
     // used to pad the end of base64 values though, so we have to strip them off.
-    const b64EncodedStr = btoa(dataStr).replace(/={1,2}$/, '');
+    const b64EncodedStr = (btoa(dataStr) as string).replace(/={1,2}$/, '');
 
     return b64EncodedStr;
   }

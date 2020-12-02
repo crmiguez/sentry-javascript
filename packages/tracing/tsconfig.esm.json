@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.esm.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "esModuleInterop": true,
     "outDir": "esm"
   },
   "include": ["src/**/*"]
